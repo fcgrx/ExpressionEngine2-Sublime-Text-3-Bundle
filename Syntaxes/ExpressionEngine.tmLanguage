@@ -78,6 +78,7 @@
 			<string>--}</string>
 			<key>name</key>
 			<string>comment.block.ee</string>
+<!--
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -87,6 +88,7 @@
 					<string>invalid.illegal.bad-comments-or-CDATA.html</string>
 				</dict>
 			</array>
+-->
 		</dict>
 		<key>ee-tag</key>
 		<dict>
