@@ -261,7 +261,8 @@ EE core addons:
 	{exp:moblog:check silent="yes" which="cellphone"}
 	{exp:referrer}
 	{exp:rss:feed channel="default_site" debug="yes"}
-	{exp:safecracker channel="contact_form" return="contact/thanks" }
+	{exp:channel:form channel="contact_form" return="contact/thanks" }
+	{exp:safecracker channel="contact_form" return="contact/thanks" } {!-- deprecated 2.7.0 --}
 	{exp:search:search_results switch="resultRowOne|resultRowTwo"}
 	{exp:stats channel="news|sports"}
 	{exp:xml_encode}
@@ -480,13 +481,19 @@ Deprecated conditionals:
 	{if ignore}
 	{if attachments}
 
+invalid and valid conditionals:
+
+{if allow_comments == false } - invalid -
+{if allow_comments == FALSE } - valid -
+
 Deprecated tags:
 
 	{exp:channel:entry_form}
 	{/exp:channel:entry_form}
 	{display_custom_fields}
+	{exp:safecracker}
 
-Invalid tags (should not be highlighted as EE tags):
+Invalid tags (should not be highlighted as internal EE tags):
 
 	{preload_replac:variable_name="replacement"}
 	{preload_reace:variable_name="replacement"}
